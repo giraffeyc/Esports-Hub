@@ -1,0 +1,7 @@
+.SENCLASS {
+    height: 100%; 
+    width: 100%;    
+    background: url('../assets/LCSARENA.png') center; /*.. goes up one folder*/
+    background-size: cover;
+    z-index:1
+}

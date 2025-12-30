@@ -1,0 +1,129 @@
+.LCSPage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    min-height: 100vh; /* Makes the LCK Class take up the whole view port*/
+    min-width: 100vw;
+    margin-top: 60px;
+}
+
+.LCSBackground {
+    position: absolute; /* Relative respects layout while abosulute doesnt* if we want to move elements with relative it takes up space whereas absolute doesnt */
+    height: 100%; 
+    width: 100%;    
+    background: url('../assets/LCSARENA.png') center; /*.. goes up one folder*/
+    background-size: cover;
+    filter:brightness(40%);
+    z-index: 1;
+}
+.NavBar {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    z-index:100;
+}
+
+/* Flex only affects one children level below */
+.NavBar ul{
+    width: 100vw;
+    display: flex;  /* Use flex since by default ul is block and stacks vertically*/
+    justify-content: center; /* Horizontal alignment*/
+    align-items: center;     /* Vertical alignment*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;          /* Make the black a bit transparent*/
+    background: rgba(0, 0, 0, 0.65); /* Make the black a bit transparent*/
+    backdrop-filter: blur(25px); /* Blurs the thing behind the nav bar for the glass effect*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Add very light line to seperate nav bar from other stuff*/
+}
+
+.NavBar ul li a {
+    display: block;
+    color: #FFFAFA;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    gap: 20px;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.NavBar ul li a:hover {
+    color:#ff3366;
+    transform: translateY(-2px);
+}
+
+.LCSDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background: rgba(7, 10, 20, 0.75);    
+    backdrop-filter: blur(6px);
+    border: 3px solid transparent;  /* Create 3 px thats invisible for border image to fill*/
+    border-image: linear-gradient(135deg, #C4A15B, #00D8FF) 1;
+    max-width: 70%; 
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.LCSDescription:hover{
+    transition: transform .2s;
+    transform-origin: center;
+    transform: scale(1.1);
+}
+
+.LCSDescription h1 {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 14px rgba(0, 216, 255, 0.8);
+    padding: 20px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.LCSDescription p {
+    color: #E0E0E0;
+    line-height: 1.6; /* Space between each line */
+    font-size: 16px; 
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.LCSTeams {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #6EE7FF;
+    text-shadow: 0 0 16px rgba(110, 231, 255, 0.8);
+    z-index: 2;
+}
+
+.LCSTeams1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    z-index: 2;
+    padding-bottom: 30px;
+    max-width: 65%;
+    padding-top: 25px;  
+}
+
+.LCSTeams2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    z-index: 2;
+    padding-bottom: 30px;
+    max-width: 65%
+}

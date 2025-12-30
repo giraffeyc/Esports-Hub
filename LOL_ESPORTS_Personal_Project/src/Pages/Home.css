@@ -1,0 +1,112 @@
+.Home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    min-height: 100vh; /* Makes the Home Class take up the whole view port*/
+    margin-top: 60px;
+}
+
+.Background {
+    position: absolute; /* Relative respects layout while abosulute doesnt* if we want to move elements with relative it takes up space whereas absolute doesnt */
+    height: 100%; 
+    width: 100%;      
+    background: url('../assets/Home_Background.png') center; /*.. goes up one folder*/
+    background-size: cover;
+    filter:brightness(40%);
+    z-index: 1;
+}
+
+.NavBar {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    z-index:100;
+    /* No flex needed - single child takes full space anyway */
+}
+
+/* Flex only affects one children level below */
+.NavBar ul{
+    width: 100vw;
+    display: flex;  /* Use flex since by default ul is block and stacks vertically*/
+    justify-content: center; /* Horizontal alignment*/
+    align-items: center;     /* Vertical alignment*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;          /* Make the black a bit transparent*/
+    background: rgba(0, 0, 0, 0.65); /* Make the black a bit transparent*/
+    backdrop-filter: blur(25px); /* Blurs the thing behind the nav bar for the glass effect*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Add very light line to seperate nav bar from other stuff*/
+}
+
+.NavBar ul li a {
+    display: block;
+    color: #FFFAFA;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    gap: 20px;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.NavBar ul li a:hover {
+    color:#ff3366;
+    transform: translateY(-2px);
+}
+
+.Home h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: #C89B3C;
+    z-index: 2;
+}
+
+.Home p{
+    font-size: 36px;
+    font-weight: bold;
+    color: #DDA0DD;
+    z-index: 2;
+    max-width: 70%; 
+}
+
+.Home h2{
+    font-family: 'Inter', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    color: #C89B3C;
+    letter-spacing: -0.02em;
+    z-index: 2;
+}
+
+.HomeRegionCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    z-index: 2;
+    /*padding-bottom: 15px;*/
+}
+
+.Home h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    color: #C89B3C;
+    z-index: 2;
+}
+
+.HomePlayerCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    z-index: 2;
+    padding-bottom: 30px;
+}
